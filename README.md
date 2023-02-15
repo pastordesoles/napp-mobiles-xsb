@@ -1,7 +1,9 @@
+![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=alert_status) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=bugs)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb) [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb) [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=pastordesoles_napp-mobiles-xsb&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=pastordesoles_napp-mobiles-xsb)
+
 # NappMobiles
 
 > Get your next phone here!
-> Live demo [_here_](). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://napp-mobiles-xsb.netlify.app/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 
