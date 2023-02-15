@@ -7,11 +7,16 @@ const ProductListPage = () => {
   const [phones, setPhones] = useState([]);
 
   useEffect(() => {
-    const data = getPhones();
-    setPhones(data);
-  }, [getPhones, phones]);
+    (async () => {
+      const data = await getPhones();
+      setPhones(data);
+    })();
+  }, [getPhones]);
 
-  return <PhoneCardList phone={phones} />;
+  if (phones.length === 0) {
+    return <h1>nope</h1>;
+  }
+  return <PhoneCardList phones={phones} />;
 };
 
 export default ProductListPage;
