@@ -1,8 +1,8 @@
-const PhoneCardList = ({ phone }) => {
+const PhoneCardList = ({ phones }) => {
   return (
     <>
       <ul className="phones">
-        {phone.map((phone) => (
+        {phones.map((phone) => (
           <li key={phone.id} className="phone">
             <h3>{phone.name}</h3>
             <img src={phone.image} alt={phone.name} />
