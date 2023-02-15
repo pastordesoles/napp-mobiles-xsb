@@ -10,6 +10,10 @@ const App = createBrowserRouter([
         path: "/phone/:phoneId",
         element: <ProductListPage />,
       },
+      {
+        path: "*",
+        element: <ProductListPage />,
+      },
     ],
   },
 ]);
