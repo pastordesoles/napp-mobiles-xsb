@@ -1,5 +1,21 @@
-function App() {
-  return <h1>In progress</h1>;
-}
+import { createBrowserRouter } from "react-router-dom";
+import ProductListPage from "../../pages/ProductListPage/ProductListPage";
+
+const App = createBrowserRouter([
+  {
+    path: "/",
+    element: <ProductListPage />,
+    children: [
+      {
+        path: "/phone/:phoneId",
+        element: <ProductListPage />,
+      },
+      {
+        path: "*",
+        element: <ProductListPage />,
+      },
+    ],
+  },
+]);
 
 export default App;
