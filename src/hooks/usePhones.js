@@ -8,7 +8,7 @@ const usePhones = () => {
     const localdata = localStorage.getItem("phones");
     const cache = JSON.parse(localdata);
 
-    if (localdata && !(cache.expire <= Date.now())) {
+    if (localdata && !(Date.now() >= cache.expire)) {
       return cache.data;
     }
     try {
@@ -21,7 +21,7 @@ const usePhones = () => {
 
       return response.data;
     } catch (error) {
-      throw error;
+      throw new Error("Ups.....Fatal Error BOOOM");
     }
   }, []);
 
