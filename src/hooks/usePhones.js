@@ -11,15 +11,18 @@ const usePhones = () => {
     if (localdata && !(cache.expire <= Date.now())) {
       return cache.data;
     }
+    try {
+      const response = await axios.get(`${apiUrl}`);
 
-    const response = await axios.get(`${apiUrl}`);
+      localStorage.setItem(
+        "phones",
+        JSON.stringify({ data: response.data, expire: Date.now() + 3600000 })
+      );
 
-    localStorage.setItem(
-      "phones",
-      JSON.stringify({ data: response.data, expire: Date.now() + 3600000 })
-    );
-
-    return response.data;
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }, []);
 
   return { getPhones };
