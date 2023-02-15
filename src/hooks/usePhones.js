@@ -8,9 +8,10 @@ const usePhones = () => {
     const localdata = localStorage.getItem("phones");
     const cache = JSON.parse(localdata);
 
-    if (localdata && !(Date.now() >= cache.expire)) {
+    if (localdata && !(cache.expire <= Date.now())) {
       return cache.data;
     }
+
     try {
       const response = await axios.get(`${apiUrl}`);
 
