@@ -1,5 +1,7 @@
+import ProductListPage from "../../pages/ProductListPage/ProductListPage";
+
 function App() {
-  return <h1>In progress</h1>;
+  return <ProductListPage />;
 }
 
 export default App;
