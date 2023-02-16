@@ -12,7 +12,10 @@ const App = () => {
       <Header productCount={productCount} />
       <Routes>
         <Route path="/" element={<ProductListPage />} />
-        <Route path="/phone/:phoneId" element={<ProductListPage />} />
+        <Route
+          path="/phone/:phoneId"
+          element={<ProductListPage key={setProductCount} />}
+        />
         <Route path="*" element={<ProductListPage />} />
       </Routes>
     </>
