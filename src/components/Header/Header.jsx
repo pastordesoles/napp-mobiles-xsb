@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import HeaderStyled from "./HeaderStyled";
 
-const Header = ({ cartContent }) => {
+const Header = ({ productCount }) => {
   return (
     <>
       <HeaderStyled>
@@ -24,7 +24,7 @@ const Header = ({ cartContent }) => {
             data-testid="cart__icon"
             className="cart__icon"
           />
-          <span className="cart__count">{cartContent}1</span>
+          <span className="cart__count">{productCount}</span>
         </div>
       </HeaderStyled>
       <Outlet />
