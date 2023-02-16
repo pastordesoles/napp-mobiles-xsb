@@ -33,6 +33,7 @@ const ProductListPage = () => {
         placeholder="Mobel, brand"
         className="input"
         autoComplete="off"
+        data-testid="filter"
       />
       {filteredPhones(phones).length === 0 ? (
         <span className="no-results">Ups...We are out of signal</span>
