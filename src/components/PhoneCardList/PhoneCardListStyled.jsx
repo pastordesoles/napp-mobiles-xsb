@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const PhoneCardListStyled = styled.ul`
+  width: 100%;
   display: grid;
   row-gap: 30px;
   grid-template-columns: repeat(1, 1fr);
