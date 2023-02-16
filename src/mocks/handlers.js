@@ -1,5 +1,5 @@
 import { rest } from "msw";
-import phoneMock from "./phoneMock";
+import { phoneMock } from "./phoneMock";
 
 let apiUrl = process.env.REACT_APP_API_URL;
 

@@ -26,7 +26,17 @@ const usePhones = () => {
     }
   }, []);
 
-  return { getPhones };
+  const getPhoneDetail = useCallback(async (phoneId) => {
+    try {
+      const response = await axios.get(`${apiUrl}/${phoneId}`);
+
+      return response.data;
+    } catch (error) {
+      throw new Error("Ups.....Fatal Error BOOOM");
+    }
+  }, []);
+
+  return { getPhones, getPhoneDetail };
 };
 
 export default usePhones;
