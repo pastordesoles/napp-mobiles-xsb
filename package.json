@@ -53,7 +53,7 @@
       "!src/index.jsx",
       "!src/setupTests.js",
       "!src/reportWebVitals.js",
-      "!src/styles/GlobalStyle.jsx",
+      "!src/styles/GlobalStyles.jsx",
       "!src/components/App/__snapshots__/*.snap"
     ]
   }
