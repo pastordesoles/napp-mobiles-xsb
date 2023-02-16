@@ -7,6 +7,14 @@ export const phoneMocks = [
     imgUrl:
       "https://itx-frontend-test.onrender.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg",
   },
+  {
+    id: "ZmGrkLRPXOTpxsU4jjAcv",
+    brand: "Acer",
+    model: "Iconia Talk S",
+    price: "",
+    imgUrl:
+      "https://itx-frontend-test.onrender.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg",
+  },
 ];
 
 export const phoneDetailMock = {

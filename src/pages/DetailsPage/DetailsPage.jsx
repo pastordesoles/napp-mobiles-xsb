@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import usePhones from "../../../hooks/usePhones";
+import usePhones from "../../hooks/usePhones";
 
 const DetailsPage = () => {
   const { getPhoneDetail } = usePhones();
@@ -17,7 +17,7 @@ const DetailsPage = () => {
   return (
     <section className="details">
       <h1>{phoneDetail.brand}</h1>
-      <div className="details__group"></div>
+      <div className="details__group">Test</div>
     </section>
   );
 };

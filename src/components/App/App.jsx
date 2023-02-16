@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import DetailsPage from "../../pages/ProductListPage/DetailsPage/DetailsPage";
+import DetailsPage from "../../pages/DetailsPage/DetailsPage";
 import ProductListPage from "../../pages/ProductListPage/ProductListPage";
 import Header from "../Header/Header";
 
