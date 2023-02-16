@@ -30,7 +30,7 @@ exports[`Given an App component When it's rendered with path '/*' Then it should
         <span>
           Home
         </span>
-         /
+           /
       </a>
       <a
         aria-current="page"
@@ -41,7 +41,7 @@ exports[`Given an App component When it's rendered with path '/*' Then it should
         <span>
           *
         </span>
-         /
+           /
       </a>
     </div>
   </div>
