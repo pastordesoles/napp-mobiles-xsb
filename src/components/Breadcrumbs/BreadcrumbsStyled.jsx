@@ -6,9 +6,9 @@ const BreadcrumbsStyled = styled.div`
   gap: 1rem;
 
   a {
-    color: ${(props) => props.theme.colors.mainColors.dark};
+    color: #2d2d2d;
     font-size: 1.125rem;
-    font-weight: ${(props) => props.theme.fontWeights.bold};
+    font-weight: 700;
   }
 `;
 
