@@ -4,6 +4,7 @@ const ProductListPageStyled = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
   .input {
     height: 40px;
@@ -25,6 +26,14 @@ const ProductListPageStyled = styled.main`
     border-color: rgba(27, 19, 45, 0.4);
     background-color: #fff;
     box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+  }
+
+  .no-results {
+    color: ${(props) => props.theme.colors.mainColors.dark};
+    font-size: 2rem;
+    font-weight: ${(props) => props.theme.fontWeights.bold};
+    padding: 1rem;
+    text-align: center;
   }
 `;
 

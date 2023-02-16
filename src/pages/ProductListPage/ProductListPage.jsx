@@ -19,8 +19,8 @@ const ProductListPage = () => {
   const filteredPhones = (phones) => {
     return phones?.filter(
       (phone) =>
-        phone.brand?.toLowerCase().includes(filter.toLowerCase()) ||
-        phone.model?.toLowerCase().includes(filter.toLowerCase())
+        phone.brand?.toLowerCase().startsWith(filter.toLowerCase()) ||
+        phone.model?.toLowerCase().startsWith(filter.toLowerCase())
     );
   };
 
@@ -35,7 +35,7 @@ const ProductListPage = () => {
         autoComplete="off"
       />
       {filteredPhones(phones).length === 0 ? (
-        <h1>nope</h1>
+        <span className="no-results">Ups...We are out of signal</span>
       ) : (
         <PhoneCardList phones={filteredPhones(phones)} />
       )}
