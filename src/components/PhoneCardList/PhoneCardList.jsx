@@ -1,14 +1,18 @@
+import PhoneCardListStyled from "./PhoneCardListStyled";
+
 const PhoneCardList = ({ phones }) => {
   return (
     <>
-      <ul className="phones">
+      <PhoneCardListStyled className="phones-list">
         {phones.map((phone) => (
           <li key={phone.id} className="phone">
-            <h3>{`${phone.brand} ${phone.model}`}</h3>
-            <img src={phone.imgUrl} alt={phone.model} />
+            <article>
+              <h3>{`${phone.brand} ${phone.model}`}</h3>
+              <img src={phone.imgUrl} alt={phone.model} />
+            </article>
           </li>
         ))}
-      </ul>
+      </PhoneCardListStyled>
     </>
   );
 };
