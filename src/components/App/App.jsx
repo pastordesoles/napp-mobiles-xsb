@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ProductListPage from "../../pages/ProductListPage/ProductListPage";
 import Header from "../Header/Header";
 
@@ -16,7 +16,7 @@ const App = () => {
           path="/phone/:phoneId"
           element={<ProductListPage key={setProductCount} />}
         />
-        <Route path="*" element={<ProductListPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
