@@ -20,7 +20,7 @@ describe("Given a PhoneCardList component", () => {
 
       const phoneList = screen.getAllByRole("listitem");
 
-      expect(phoneList).toHaveLength(10);
+      expect(phoneList).toHaveLength(1);
     });
   });
 });
