@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import mainTheme from "../../styles/mainTheme";
 import GlobalStyle from "../../styles/GlobalStyles";
 import PhoneCardList from "./PhoneCardList";
-import phoneMocks from "../../mocks/phoneMock";
+import { phoneMocks } from "../../mocks/phoneMock";
 
 describe("Given a PhoneCardList component", () => {
   describe("When it's rendered with a list of 10 phones", () => {
