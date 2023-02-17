@@ -2,7 +2,7 @@
 
 exports[`Given an App component When it's rendered with path '/*' Then it should render the main page 1`] = `
 <header
-  className="sc-eDvSVe cbJoOm"
+  className="sc-jSUZER eVwtoY"
 >
   <div
     className="navigation"
@@ -20,7 +20,7 @@ exports[`Given an App component When it's rendered with path '/*' Then it should
       />
     </a>
     <div
-      className="sc-hLBbgP eNKSoi"
+      className="sc-eDvSVe gKifqu"
     >
       <a
         className=""
