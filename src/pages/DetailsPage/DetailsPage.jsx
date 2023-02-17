@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import DetailActions from "../../components/DetailActions/DetailActions";
 import DetailSpecs from "../../components/DetailSpecs/DetailSpecs";
 import usePhones from "../../hooks/usePhones";
 
@@ -24,6 +25,7 @@ const DetailsPage = () => {
       />
       <div className="details__group">
         {<DetailSpecs phoneDetail={phoneDetail} />}
+        {<DetailActions phoneDetail={phoneDetail} />}
       </div>
     </section>
   );
