@@ -17,7 +17,11 @@ const DetailsPage = () => {
 
   return (
     <section className="details">
-      <h1>{phoneDetail.brand}</h1>
+      <img
+        className="details__image"
+        src={phoneDetail.imgUrl}
+        alt={phoneDetail.model}
+      />
       <div className="details__group">
         {<DetailSpecs phoneDetail={phoneDetail} />}
       </div>

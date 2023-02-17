@@ -23,14 +23,10 @@ const DetailSpecs = ({ phoneDetail }) => {
         <span className="property__item">{`Battery: ${phoneDetail.battery}`}</span>
       </li>
       <li className="phone-detail-property">
-        <span className="property__item">{`Camera 1: ${phoneDetail.primaryCamera.join(
-          " "
-        )}`}</span>
+        <span className="property__item">{`Camera 1: ${phoneDetail.primaryCamera}`}</span>
       </li>
       <li className="phone-detail-property">
-        <span className="property__item">{`Camera 2: ${phoneDetail.secondaryCmera.join(
-          " "
-        )}`}</span>
+        <span className="property__item">{`Camera 2: ${phoneDetail.secondaryCmera}`}</span>
       </li>
       <li className="phone-detail-property">
         <span className="property__item">{`Size: ${phoneDetail.dimentions}`}</span>

@@ -1,25 +1,26 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import DetailsPage from "./DetailsPage";
+import DetailSpecs from "./DetailSpecs";
 import mainTheme from "../../styles/mainTheme";
 import GlobalStyle from "../../styles/GlobalStyles";
+import { phoneDetailMock } from "../../mocks/phoneMock";
 
-describe("Given a ProductListPage component", () => {
+describe("Given a DetailSpecs component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show a input search", () => {
+    test("Then it should show 11 list items", () => {
       render(
         <BrowserRouter>
           <ThemeProvider theme={mainTheme}>
             <GlobalStyle />
-            <DetailsPage />
+            <DetailSpecs phoneDetail={phoneDetailMock} />
           </ThemeProvider>
         </BrowserRouter>
       );
 
-      const image = screen.queryByRole("img");
+      const listItems = screen.queryAllByRole("listitem");
 
-      expect(image).toBeInTheDocument();
+      expect(listItems).toHaveLength(11);
     });
   });
 });
