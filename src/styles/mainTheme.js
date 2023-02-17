@@ -2,7 +2,7 @@ const mainTheme = {
   colors: {
     mainColors: {
       dark: "#2d2d2d",
-      gray: "#EEEEEE",
+      white: "#ffffff",
     },
     error: {
       base: "#fbbaba",

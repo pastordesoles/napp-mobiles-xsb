@@ -12,7 +12,7 @@ html {
   
 }
 body {
-  background-color: ${(props) => props.theme.colors.mainColors.gray};
+  background-color: ${(props) => props.theme.colors.mainColors.white};
 }
 button,
 select {
