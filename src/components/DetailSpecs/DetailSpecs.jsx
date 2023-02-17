@@ -1,6 +1,8 @@
+import DetailSpecsStyled from "./DetailSpecsStyled";
+
 const DetailSpecs = ({ phoneDetail }) => {
   return (
-    <ul className="phone-detail">
+    <DetailSpecsStyled className="phone-detail">
       <li className="phone-detail-property">
         <span className="property__item">{`Brand: ${phoneDetail.brand}`}</span>
       </li>
@@ -20,7 +22,9 @@ const DetailSpecs = ({ phoneDetail }) => {
         <span className="property__item">{`Screen: ${phoneDetail.displayResolution}`}</span>
       </li>
       <li className="phone-detail-property">
-        <span className="property__item">{`Battery: ${phoneDetail.battery}`}</span>
+        <span className="property__item">{`Battery: ${
+          phoneDetail.battery ? phoneDetail.battery : "--"
+        }`}</span>
       </li>
       <li className="phone-detail-property">
         <span className="property__item">{`Camera 1: ${phoneDetail.primaryCamera}`}</span>
@@ -32,9 +36,11 @@ const DetailSpecs = ({ phoneDetail }) => {
         <span className="property__item">{`Size: ${phoneDetail.dimentions}`}</span>
       </li>
       <li className="phone-detail-property">
-        <span className="property__item">{`Weight: ${phoneDetail.weight}gr`}</span>
+        <span className="property__item">{`Weight: ${
+          phoneDetail.weight ? phoneDetail.weight : "-- "
+        }gr`}</span>
       </li>
-    </ul>
+    </DetailSpecsStyled>
   );
 };
 
