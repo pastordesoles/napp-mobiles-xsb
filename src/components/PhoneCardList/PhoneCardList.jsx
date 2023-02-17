@@ -21,7 +21,7 @@ const PhoneCardList = ({ phones }) => {
                 {phone.price ? (
                   <span className="phone__price">{`${phone.price}€`}</span>
                 ) : (
-                  <span className="phone__price">{`Ask us how much!`}</span>
+                  <span className="phone__price">{`-- €`}</span>
                 )}
               </article>
             </Link>
