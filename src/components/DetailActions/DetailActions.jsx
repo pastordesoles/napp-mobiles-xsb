@@ -32,12 +32,12 @@ const DetailActions = ({ phoneDetail }) => {
 
   return (
     <DetailActionsStyled className="actions" onSubmit={handleSubmit}>
-      <div className="actions__form-group">
-        <label className="form-group__label" htmlFor="memory-select">
-          {`Select memory size: `}
+      <div className="actions__form">
+        <label className="form__label" htmlFor="memory-select">
+          {`Memory size: `}
         </label>
         <select
-          className="form-group__select"
+          className="form__select"
           id="memory-select"
           onChange={(event) => selectStorage(event.target.value)}
         >
@@ -48,12 +48,12 @@ const DetailActions = ({ phoneDetail }) => {
           ))}
         </select>
       </div>
-      <div className="actions__form-group">
-        <label className="form-group__label" htmlFor="color-select">
-          {`Select color: `}
+      <div className="actions__form">
+        <label className="form__label" htmlFor="color-select">
+          {`Color: `}
         </label>
         <select
-          className="form-group__select"
+          className="form__select"
           id="color-select"
           onChange={(event) => selectColor(event.target.value)}
         >
