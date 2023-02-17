@@ -71,3 +71,26 @@ export const phoneDetailMock = {
     ],
   },
 };
+
+export const phoneDetailMockMissingElements = {
+  id: "pMZMhe_ZaAPZoaCCtlDrg",
+  brand: "Acer",
+  model: "Liquid Jade 2",
+
+  imgUrl:
+    "https://itx-frontend-test.onrender.com/images/pMZMhe_ZaAPZoaCCtlDrg.jpg",
+
+  weight: "100",
+  ram: "3 GB RAM",
+  primaryCamera: ["21 MP", "autofocus", "dual-LED flash"],
+  secondaryCmera: "8 MP",
+
+  displayType: "Super AMOLED capacitive touchscreen  16M colors",
+  displayResolution: "5.5 inches",
+  displaySize: "1080 x 1920 pixels (~401 ppi pixel density)",
+  os: "Android 6.0 (Marshmallow)",
+  cpu: "Hexa-core (4x1.4 GHz Cortex-A53 & 2x1.8 GHz Cortex-A57)",
+  chipset: "Qualcomm MSM8992 Snapdragon 808",
+
+  battery: "Big one",
+};

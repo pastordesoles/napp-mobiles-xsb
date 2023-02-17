@@ -17,9 +17,9 @@ describe("Given a ProductListPage component", () => {
         </BrowserRouter>
       );
 
-      const input = screen.queryByText("Test");
+      const image = screen.queryByRole("img");
 
-      expect(input).toBeInTheDocument();
+      expect(image).toBeInTheDocument();
     });
   });
 });

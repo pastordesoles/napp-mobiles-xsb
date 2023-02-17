@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import DetailSpecs from "../../components/DetailSpecs/DetailSpecs";
 import usePhones from "../../hooks/usePhones";
 
 const DetailsPage = () => {
@@ -16,8 +17,14 @@ const DetailsPage = () => {
 
   return (
     <section className="details">
-      <h1>{phoneDetail.brand}</h1>
-      <div className="details__group">Test</div>
+      <img
+        className="details__image"
+        src={phoneDetail.imgUrl}
+        alt={phoneDetail.model}
+      />
+      <div className="details__group">
+        {<DetailSpecs phoneDetail={phoneDetail} />}
+      </div>
     </section>
   );
 };
