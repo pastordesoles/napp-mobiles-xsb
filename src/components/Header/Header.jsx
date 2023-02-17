@@ -2,8 +2,24 @@ import { Link, Outlet } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import HeaderStyled from "./HeaderStyled";
+import { useEffect, useState } from "react";
+import { persistance } from "../../lib/storageHandler";
 
-const Header = ({ productCount }) => {
+const Header = () => {
+  const [cartItems, setCartItems] = useState(persistance.get("cart") || 0);
+
+  useEffect(() => {
+    const updateProductCount = () => {
+      setCartItems(persistance.get("cart") || 0);
+    };
+
+    window.addEventListener("storage", updateProductCount);
+
+    return () => {
+      window.removeEventListener("storage", updateProductCount);
+    };
+  }, []);
+
   return (
     <>
       <HeaderStyled>
@@ -24,7 +40,7 @@ const Header = ({ productCount }) => {
             data-testid="cart__icon"
             className="cart__icon"
           />
-          <span className="cart__count">{productCount}</span>
+          <span className="cart__count">{cartItems.data || 0}</span>
         </div>
       </HeaderStyled>
       <Outlet />
