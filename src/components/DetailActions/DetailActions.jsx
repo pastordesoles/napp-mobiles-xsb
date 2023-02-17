@@ -42,7 +42,7 @@ const DetailActions = ({ phoneDetail }) => {
           onChange={(event) => selectStorage(event.target.value)}
         >
           {phoneDetail.options?.storages?.map(({ code, name }, index) => (
-            <option key={index} value={code}>
+            <option key={code} value={code}>
               {name}
             </option>
           ))}
@@ -58,7 +58,7 @@ const DetailActions = ({ phoneDetail }) => {
           onChange={(event) => selectColor(event.target.value)}
         >
           {phoneDetail.options?.colors?.map(({ code, name }, index) => (
-            <option key={index} value={code}>
+            <option key={code} value={code}>
               {name}
             </option>
           ))}
