@@ -67,6 +67,8 @@ const usePhones = () => {
       }
       localStorage.setItem("cart", JSON.stringify({ data: cartData }));
       window.dispatchEvent(new Event("storage"));
+
+      return response.data;
     } catch (error) {
       throw new Error("Ups.....Fatal Error BOOOM");
     }
