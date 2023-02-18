@@ -1,11 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
 import DetailActions from "./DetailActions";
 import usePhones from "../../hooks/usePhones";
-import mainTheme from "../../styles/mainTheme";
-import GlobalStyle from "../../styles/GlobalStyles";
 import { phoneDetailMock } from "../../mocks/phoneMock";
+import MainWrapper from "../../mocks/wrapper";
 
 jest.mock("../../hooks/usePhones");
 
@@ -18,14 +15,9 @@ describe("Given a DetailActions component", () => {
 
   describe("When it's rendered", () => {
     test("Then it should show a select for storage options", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const storageSelect = screen.getByLabelText(/Memory size:/i);
 
@@ -33,14 +25,9 @@ describe("Given a DetailActions component", () => {
     });
 
     test("Then it should show a select for color options", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const colorSelect = screen.getByLabelText(/Color:/i);
 
@@ -48,14 +35,9 @@ describe("Given a DetailActions component", () => {
     });
 
     test("Then it should show a submit button", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const submitButton = screen.getByRole("button", { name: /add to cart/i });
 
@@ -63,14 +45,9 @@ describe("Given a DetailActions component", () => {
     });
 
     test("Then it should select the first storage option by default", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const storageSelect = screen.getByLabelText(/Memory size:/i);
 
@@ -80,14 +57,9 @@ describe("Given a DetailActions component", () => {
     });
 
     test("Then it should select the first color option by default", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const colorSelect = screen.getByLabelText(/Color:/i);
 
@@ -99,14 +71,9 @@ describe("Given a DetailActions component", () => {
 
   describe("When a user selects a different storage option", () => {
     test("Then it should update the selected storage code", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const storageSelect = screen.getByLabelText(/Memory size:/i);
 
@@ -122,14 +89,9 @@ describe("Given a DetailActions component", () => {
 
   describe("When a user selects a different color option", () => {
     test("Then it should update the selected color code", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const storageSelect = screen.getByLabelText(/Color:/i);
 
@@ -150,14 +112,9 @@ describe("Given a DetailActions component", () => {
         addPhoneToCart,
       });
 
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailActions phoneDetail={phoneDetailMock} />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailActions phoneDetail={phoneDetailMock} />, {
+        wrapper: MainWrapper,
+      });
 
       const submitButton = screen.getByRole("button", { name: /add to cart/i });
       fireEvent.click(submitButton);
