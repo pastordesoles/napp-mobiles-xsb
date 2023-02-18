@@ -21,7 +21,7 @@ export const phoneDetailMock = {
   id: "pMZMhe_ZaAPZoaCCtlDrg",
   brand: "Acer",
   model: "Liquid Jade 2",
-  price: "",
+  price: "123",
   imgUrl:
     "https://itx-frontend-test.onrender.com/images/pMZMhe_ZaAPZoaCCtlDrg.jpg",
   networkTechnology: "GSM / HSPA / LTE",
