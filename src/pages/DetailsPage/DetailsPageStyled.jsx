@@ -7,19 +7,20 @@ const DetailsPageStyled = styled.main`
   gap: 2rem;
   padding: 1rem;
   max-height: 100%;
+  max-width: 100vw;
 
   article,
-  .details__group {
+  .details__sections {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 
-    .details__group {
-      -webkit-animation: details__group 0.6s ease-out both;
-      animation: details__group 0.6s ease-out both;
+    .details__sections {
+      -webkit-animation: details__sections 0.6s ease-out both;
+      animation: details__sections 0.6s ease-out both;
 
-      @-webkit-keyframes details__group {
+      @-webkit-keyframes details__sections {
         0% {
           -webkit-transform: translateX(800px) rotate(540deg);
           transform: translateX(800px) rotate(540deg);
@@ -31,7 +32,7 @@ const DetailsPageStyled = styled.main`
           opacity: 1;
         }
       }
-      @keyframes details__group {
+      @keyframes details__sections {
         0% {
           -webkit-transform: translateX(800px) rotate(540deg);
           transform: translateX(800px) rotate(540deg);
@@ -78,7 +79,7 @@ const DetailsPageStyled = styled.main`
     @media only screen and (min-width: 479px) {
       flex-direction: row;
 
-      .details__group {
+      .details__sections {
         flex-direction: column;
       }
     }
@@ -87,7 +88,7 @@ const DetailsPageStyled = styled.main`
       flex-direction: row;
       gap: 10rem;
 
-      .details__group {
+      .details__sections {
         flex-direction: column;
         gap: 2rem;
       }
