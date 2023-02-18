@@ -31,7 +31,7 @@ const DetailsPage = () => {
               height="212"
             />
 
-            <div className="details__group">
+            <div className="details__sections">
               <Link to="/">
                 <h2 className="return">Home</h2>
               </Link>
