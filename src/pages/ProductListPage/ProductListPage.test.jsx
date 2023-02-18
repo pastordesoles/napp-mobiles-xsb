@@ -7,6 +7,7 @@ import GlobalStyle from "../../styles/GlobalStyles";
 import ProductListPage from "./ProductListPage";
 import usePhones from "../../hooks/usePhones";
 import { phoneMocks } from "../../mocks/phoneMock";
+import MainWrapper from "../../mocks/wrapper";
 
 jest.mock("../../hooks/usePhones");
 
@@ -18,14 +19,9 @@ describe("Given a ProductListPage component", () => {
   });
   describe("When it's rendered", () => {
     test("Then it should show a input search", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <ProductListPage />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<ProductListPage />, {
+        wrapper: MainWrapper,
+      });
 
       const input = screen.getByTestId("filter");
 
@@ -35,14 +31,9 @@ describe("Given a ProductListPage component", () => {
 
   describe("When it's rendered and user inputs a value", () => {
     test("Then it should show a message", async () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <ProductListPage />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<ProductListPage />, {
+        wrapper: MainWrapper,
+      });
 
       const input = screen.getByTestId("filter");
       await userEvent.type(input, "i");

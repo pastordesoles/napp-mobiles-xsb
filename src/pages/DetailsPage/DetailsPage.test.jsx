@@ -5,6 +5,7 @@ import DetailsPage from "./DetailsPage";
 import mainTheme from "../../styles/mainTheme";
 import GlobalStyle from "../../styles/GlobalStyles";
 import usePhones from "../../hooks/usePhones";
+import MainWrapper from "../../mocks/wrapper";
 
 jest.mock("../../hooks/usePhones");
 
@@ -20,14 +21,9 @@ describe("Given a ProductListPage component", () => {
 
   describe("When it's rendered", () => {
     test("Then it should show a phone image", () => {
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailsPage />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailsPage />, {
+        wrapper: MainWrapper,
+      });
 
       const image = screen.queryByRole("img");
 
@@ -40,14 +36,9 @@ describe("Given a ProductListPage component", () => {
     test("Then it should show 'Ups...We are out of signal'", async () => {
       mockGetPhoneDetail.mockReturnValue(undefined);
 
-      render(
-        <BrowserRouter>
-          <ThemeProvider theme={mainTheme}>
-            <GlobalStyle />
-            <DetailsPage />
-          </ThemeProvider>
-        </BrowserRouter>
-      );
+      render(<DetailsPage />, {
+        wrapper: MainWrapper,
+      });
 
       await waitFor(() => {
         const noResults = screen.queryByText("Ups...We are out of signal");
