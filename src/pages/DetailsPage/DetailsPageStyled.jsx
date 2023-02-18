@@ -97,14 +97,12 @@ const DetailsPageStyled = styled.main`
     color: ${(props) => props.theme.colors.mainColors.dark};
     font-size: 1rem;
     font-weight: ${(props) => props.theme.fontWeights.bold};
-    padding: 0.125rem;
   }
 
   .no-results {
     color: ${(props) => props.theme.colors.mainColors.dark};
     font-size: 2rem;
     font-weight: ${(props) => props.theme.fontWeights.bold};
-    padding: 1rem;
     text-align: center;
   }
 `;

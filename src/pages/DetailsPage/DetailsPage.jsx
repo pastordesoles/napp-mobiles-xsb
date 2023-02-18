@@ -30,8 +30,8 @@ const DetailsPage = () => {
             />
 
             <div className="details__group">
-              <Link to="/" className="return">
-                Home
+              <Link to="/">
+                <h2 className="return">Home</h2>
               </Link>
               {<DetailSpecs phoneDetail={phoneDetail} />}
               {<DetailActions phoneDetail={phoneDetail} />}
