@@ -27,6 +27,8 @@ const DetailsPage = () => {
               className="details__image"
               src={phoneDetail.imgUrl}
               alt={phoneDetail.model}
+              width="160"
+              height="212"
             />
 
             <div className="details__group">
