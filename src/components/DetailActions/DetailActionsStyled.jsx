@@ -26,6 +26,10 @@ const DetailActionsStyled = styled.form`
     font-weight: 500;
   }
 
+  .form__label {
+    font-weight: bold;
+  }
+
   button {
     outline: 0;
     border: 0;
