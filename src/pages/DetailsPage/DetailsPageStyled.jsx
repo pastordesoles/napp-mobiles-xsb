@@ -6,6 +6,7 @@ const DetailsPageStyled = styled.main`
   align-items: center;
   gap: 2rem;
   padding: 1rem;
+  max-height: 100%;
 
   article,
   .details__group {

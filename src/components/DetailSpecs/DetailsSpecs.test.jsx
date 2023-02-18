@@ -23,7 +23,7 @@ describe("Given a DetailSpecs component", () => {
 
       const listItems = screen.queryAllByRole("listitem");
 
-      expect(listItems).toHaveLength(11);
+      expect(listItems).toHaveLength(12);
     });
   });
 
@@ -40,7 +40,7 @@ describe("Given a DetailSpecs component", () => {
 
       const listItems = screen.queryAllByRole("listitem");
 
-      expect(listItems).toHaveLength(11);
+      expect(listItems).toHaveLength(12);
     });
   });
 });
