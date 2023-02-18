@@ -30,7 +30,7 @@ const ProductListPage = () => {
         onChange={(event) => setFilter(event.target.value)}
         name="query"
         type="text"
-        placeholder="Mobel, brand"
+        placeholder="Model, brand"
         className="input"
         autoComplete="off"
         data-testid="filter"
