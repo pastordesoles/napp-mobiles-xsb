@@ -13,6 +13,6 @@ const get = (key) => {
   return storage.get(key);
 };
 
-export const persistance = {
+export const storageHandler = {
   get,
 };

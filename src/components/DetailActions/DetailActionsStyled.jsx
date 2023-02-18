@@ -8,6 +8,7 @@ const DetailActionsStyled = styled.form`
   flex-direction: column;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s;
+  border-radius: 15px;
 
   select {
     outline: 0;
@@ -25,6 +26,10 @@ const DetailActionsStyled = styled.form`
     font-weight: 500;
   }
 
+  .form__label {
+    font-weight: bold;
+  }
+
   button {
     outline: 0;
     border: 0;
@@ -39,6 +44,37 @@ const DetailActionsStyled = styled.form`
     margin-right: 5px;
     transition: all 0.3s ease;
     font-weight: 500;
+    -webkit-animation: button 0.65s linear both;
+    animation: button 0.65s linear both;
+
+    @-webkit-keyframes button {
+      0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+      }
+      50% {
+        -webkit-transform: scale(2) rotateZ(180deg);
+        transform: scale(2) rotateZ(180deg);
+      }
+      100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+      }
+    }
+    @keyframes button {
+      0% {
+        -webkit-transform: scale(1) rotateZ(0);
+        transform: scale(1) rotateZ(0);
+      }
+      50% {
+        -webkit-transform: scale(2) rotateZ(180deg);
+        transform: scale(2) rotateZ(180deg);
+      }
+      100% {
+        -webkit-transform: scale(1) rotateZ(360deg);
+        transform: scale(1) rotateZ(360deg);
+      }
+    }
 
     @media only screen and (min-width: 1150px) {
       &:hover {

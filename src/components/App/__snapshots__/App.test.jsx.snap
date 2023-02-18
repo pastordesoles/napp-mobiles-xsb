@@ -2,7 +2,7 @@
 
 exports[`Given an App component When it's rendered with path '/*' Then it should render the main page 1`] = `
 <header
-  className="sc-jSUZER eVwtoY"
+  className="sc-gKPRtg jmFjrK"
 >
   <div
     className="navigation"
@@ -20,7 +20,7 @@ exports[`Given an App component When it's rendered with path '/*' Then it should
       />
     </a>
     <div
-      className="sc-eDvSVe gKifqu"
+      className="sc-jSUZER bGiRtg"
     >
       <a
         className=""
@@ -70,6 +70,7 @@ exports[`Given an App component When it's rendered with path '/*' Then it should
     </svg>
     <span
       className="cart__count"
+      data-testid="cart__count"
     >
       0
     </span>
