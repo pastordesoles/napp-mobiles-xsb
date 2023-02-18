@@ -8,6 +8,7 @@ const DetailActionsStyled = styled.form`
   flex-direction: column;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s;
+  border-radius: 15px;
 
   select {
     outline: 0;

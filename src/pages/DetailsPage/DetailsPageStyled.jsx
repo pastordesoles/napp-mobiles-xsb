@@ -44,11 +44,11 @@ const DetailsPageStyled = styled.main`
       }
     }
 
-    img {
-      -webkit-animation: img 0.6s ease-out both;
-      animation: img 0.6s ease-out both;
+    .details__image {
+      -webkit-animation: details__image 0.6s ease-out both;
+      animation: details__image 0.6s ease-out both;
 
-      @-webkit-keyframes img {
+      @-webkit-keyframes details__image {
         0% {
           -webkit-transform: translateX(-800px) rotate(-540deg);
           transform: translateX(-800px) rotate(-540deg);
@@ -60,7 +60,7 @@ const DetailsPageStyled = styled.main`
           opacity: 1;
         }
       }
-      @keyframes img {
+      @keyframes details__image {
         0% {
           -webkit-transform: translateX(-800px) rotate(-540deg);
           transform: translateX(-800px) rotate(-540deg);
