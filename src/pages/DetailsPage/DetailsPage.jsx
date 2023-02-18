@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import DetailActions from "../../components/DetailActions/DetailActions";
 import DetailSpecs from "../../components/DetailSpecs/DetailSpecs";
 import usePhones from "../../hooks/usePhones";
+import DetailsPageStyled from "./DetailsPageStyled";
 
 const DetailsPage = () => {
   const { getPhoneDetail } = usePhones();
@@ -17,17 +18,19 @@ const DetailsPage = () => {
   }, [getPhoneDetail, phoneId]);
 
   return (
-    <section className="details">
-      <img
-        className="details__image"
-        src={phoneDetail.imgUrl}
-        alt={phoneDetail.model}
-      />
-      <div className="details__group">
-        {<DetailSpecs phoneDetail={phoneDetail} />}
-        {<DetailActions phoneDetail={phoneDetail} />}
-      </div>
-    </section>
+    <DetailsPageStyled>
+      <article className="details">
+        <img
+          className="details__image"
+          src={phoneDetail.imgUrl}
+          alt={phoneDetail.model}
+        />
+        <div className="details__group">
+          {<DetailSpecs phoneDetail={phoneDetail} />}
+          {<DetailActions phoneDetail={phoneDetail} />}
+        </div>
+      </article>
+    </DetailsPageStyled>
   );
 };
 
