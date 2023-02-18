@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import DetailActions from "../../components/DetailActions/DetailActions";
 import DetailSpecs from "../../components/DetailSpecs/DetailSpecs";
 import usePhones from "../../hooks/usePhones";
@@ -18,19 +19,31 @@ const DetailsPage = () => {
   }, [getPhoneDetail, phoneId]);
 
   return (
-    <DetailsPageStyled>
-      <article className="details">
-        <img
-          className="details__image"
-          src={phoneDetail.imgUrl}
-          alt={phoneDetail.model}
-        />
-        <div className="details__group">
-          {<DetailSpecs phoneDetail={phoneDetail} />}
-          {<DetailActions phoneDetail={phoneDetail} />}
-        </div>
-      </article>
-    </DetailsPageStyled>
+    <>
+      {phoneDetail && (
+        <DetailsPageStyled>
+          <article className="details">
+            <img
+              className="details__image"
+              src={phoneDetail.imgUrl}
+              alt={phoneDetail.model}
+            />
+
+            <div className="details__group">
+              <Link to="/" className="return">
+                Home
+              </Link>
+              {<DetailSpecs phoneDetail={phoneDetail} />}
+              {<DetailActions phoneDetail={phoneDetail} />}
+            </div>
+          </article>
+        </DetailsPageStyled>
+      )}
+
+      {!phoneDetail && (
+        <span className="no-results">Ups...We are out of signal</span>
+      )}
+    </>
   );
 };
 
