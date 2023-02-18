@@ -69,6 +69,12 @@ const DetailSpecs = ({ phoneDetail }) => {
           {` ${phoneDetail.weight ? phoneDetail.weight : "-- "}gr`}
         </span>
       </li>
+      <li>
+        <span>
+          <span className="property__item">Price:</span>
+          {` ${phoneDetail.price ? phoneDetail.price : "-- "}€`}
+        </span>
+      </li>
     </DetailSpecsStyled>
   );
 };

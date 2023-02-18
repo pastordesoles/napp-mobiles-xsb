@@ -11,7 +11,7 @@ import {
 
 describe("Given a DetailSpecs component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show 11 list items", () => {
+    test("Then it should show 12 list items", () => {
       render(
         <BrowserRouter>
           <ThemeProvider theme={mainTheme}>
@@ -23,12 +23,12 @@ describe("Given a DetailSpecs component", () => {
 
       const listItems = screen.queryAllByRole("listitem");
 
-      expect(listItems).toHaveLength(11);
+      expect(listItems).toHaveLength(12);
     });
   });
 
   describe("When it's rendered and has battery and weight", () => {
-    test("Then it should show 11 list items", () => {
+    test("Then it should show 1 list items", () => {
       render(
         <BrowserRouter>
           <ThemeProvider theme={mainTheme}>
@@ -40,7 +40,7 @@ describe("Given a DetailSpecs component", () => {
 
       const listItems = screen.queryAllByRole("listitem");
 
-      expect(listItems).toHaveLength(11);
+      expect(listItems).toHaveLength(12);
     });
   });
 });
