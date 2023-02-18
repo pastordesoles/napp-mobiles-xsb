@@ -8,6 +8,10 @@ const DetailSpecsStyled = styled.ul`
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   transition: all 0.3s;
   border-radius: 15px;
+
+  .property__item {
+    font-weight: bold;
+  }
 `;
 
 export default DetailSpecsStyled;
