@@ -3,14 +3,14 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import HeaderStyled from "./HeaderStyled";
 import { useEffect, useState } from "react";
-import { persistance } from "../../lib/storageHandler";
+import { storageHandler } from "../../lib/storageHandler";
 
 const Header = () => {
-  const [cartItems, setCartItems] = useState(persistance.get("cart") || 0);
+  const [cartItems, setCartItems] = useState(storageHandler.get("cart") || 0);
 
   useEffect(() => {
     const updateProductCount = () => {
-      setCartItems(persistance.get("cart") || 0);
+      setCartItems(storageHandler.get("cart") || 0);
     };
 
     window.addEventListener("storage", updateProductCount);
@@ -40,7 +40,9 @@ const Header = () => {
             data-testid="cart__icon"
             className="cart__icon"
           />
-          <span className="cart__count">{cartItems.data || 0}</span>
+          <span className="cart__count" data-testid="cart__count">
+            {cartItems.data || 0}
+          </span>
         </div>
       </HeaderStyled>
       <Outlet />
