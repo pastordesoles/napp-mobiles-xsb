@@ -31,7 +31,7 @@ const DetailActions = ({ phoneDetail }) => {
   };
 
   return (
-    <DetailActionsStyled className="actions" onSubmit={handleSubmit}>
+    <DetailActionsStyled className="actions form" onSubmit={handleSubmit}>
       <div className="actions__form">
         <label className="form__label" htmlFor="memory-select">
           {`Memory size: `}

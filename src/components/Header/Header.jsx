@@ -9,14 +9,14 @@ const Header = () => {
   const [cartItems, setCartItems] = useState(storageHandler.get("cart") || 0);
 
   useEffect(() => {
-    const updateProductCount = () => {
+    const updateCartCount = () => {
       setCartItems(storageHandler.get("cart") || 0);
     };
 
-    window.addEventListener("storage", updateProductCount);
+    window.addEventListener("storage", updateCartCount);
 
     return () => {
-      window.removeEventListener("storage", updateProductCount);
+      window.removeEventListener("storage", updateCartCount);
     };
   }, []);
 

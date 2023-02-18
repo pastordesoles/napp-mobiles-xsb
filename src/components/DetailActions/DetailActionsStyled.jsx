@@ -40,6 +40,7 @@ const DetailActionsStyled = styled.form`
     color: #515151;
     text-transform: uppercase;
     width: 125px;
+    border-radius: 15px;
     font-family: inherit;
     margin-right: 5px;
     transition: all 0.3s ease;
