@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 import HeaderStyled from "./HeaderStyled";
 import { useEffect, useState } from "react";
@@ -36,9 +37,10 @@ const Header = () => {
           <Breadcrumbs />
         </div>
         <div className="cart-container">
-          <AiOutlineShoppingCart
+          <FontAwesomeIcon
             data-testid="cart__icon"
             className="cart__icon"
+            icon={faBasketShopping}
           />
           <span className="cart__count" data-testid="cart__count">
             {cartItems.data || 0}
