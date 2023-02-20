@@ -1,9 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
 import DetailsPage from "./DetailsPage";
-import mainTheme from "../../styles/mainTheme";
-import GlobalStyle from "../../styles/GlobalStyles";
 import usePhones from "../../hooks/usePhones";
 import MainWrapper from "../../mocks/wrapper";
 

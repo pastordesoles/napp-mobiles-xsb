@@ -20,7 +20,7 @@ describe("Given a DetailSpecs component", () => {
   });
 
   describe("When it's rendered and has battery and weight", () => {
-    test("Then it should show 1 list items", () => {
+    test("Then it should show 12 list items", () => {
       render(<DetailSpecs phoneDetail={phoneDetailMockMissingElements} />, {
         wrapper: MainWrapper,
       });
